@@ -4,30 +4,42 @@
 
 To install Ruby on Rails development environment you just need to copy and paste this line the Terminal and press Enter. Enjoy the text flying on the screen, it will take quite some time. Grabbing a refreshing drink before starting is encouraged.
 
-    $ bash < <(curl -s  https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
+    $ bash < <(curl -s  https://raw.githubusercontent.com/leesharma/up-and-running-rails/master/rails-install-ubuntu.sh)
 
 ## Next Steps
 
 ### Set up Heroku
 
-- Create a [Heroku account][heroku]
+1. Create a [Heroku account][heroku]
 
 [heroku]: https://heroku.com/
 
-- Sign into Heroku toolbelt
+2. Sign into Heroku toolbelt
 
-      $ heroku login
+```bash
+$ heroku login
+```
 
-### Install Zeal documentation
+### Install offline documentation (recommended)
 
-Zeal is an offline documentation browser inspired by Dash, available for Linux and Windows. Install it [here][zeal].
+#### OS X
+Dash is an API Documentation Browser and Code Snippet Manager. Install it [here][dash] and download the Ruby/Rails documentation and Rails Guides.
+
+[dash]: https://kapeli.com/dash
+
+#### Linux/Windows
+Zeal is an offline documentation browser inspired by Dash, available for Linux and Windows. Install it [here][zeal] and download the Ruby/Rails documentation and Rails Guides.
 
 [zeal]: http://zealdocs.org
 
-### Set up a GitHub/BitBucket/GitLab account
+### Set up a GitHub/BitBucket/GitLab account (recommended)
 
-Github is the most popular option for open-source projects, but Gitlab and Bitbucket both 
-offer unlimited private repositories for personal work. 
+[GitHub][gh] is the most popular option for open-source projects, but [GitLab][gl] and 
+[BitBucket][bb] both offer unlimited private repositories for personal work. 
+
+[gh]: https://github.com
+[gl]: https://gitlab.com
+[bb]: https://bitbucket.com
 
 Personally, I use a GitHub account for open-source work and a GitLab account to backup my
 private repositories.
