@@ -65,9 +65,5 @@ It is just a hiccup with the shell, solutions:
     $ source ~/.rvm/scripts/rvm                                                  
     Allow login shell, example http://rvm.io/integration/gnome-terminal/
 
-This installer set up an alternative git log. Try it out by typing:
-    $ git lol
-
-To set up Heroku, make an account at https://heroku.com/ and then run the following
-command (enter credentials when prompted):
-    $ heroku login"
+This installer set up an alternative git log. Try it out in a repo by typing:
+    $ git lol"
