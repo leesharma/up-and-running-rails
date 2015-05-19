@@ -46,7 +46,7 @@ private repositories.
 
 ### Start a new project
 
-    rails new *project_name* -d postgres
+    rails new *project_name* -d postgresql
     heroku create
     git remote origin master *git@github.com:username/project_name.git*
 
