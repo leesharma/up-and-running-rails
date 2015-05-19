@@ -1,10 +1,14 @@
-# Up and Running with Rails 4.2.1
+# Up and Running with Rails 4.2.1, Ubuntu edition
 
-## Script for Ubuntu
+## About
+
+This guide was written with Ubuntu 14.x in mind.
+
+## Script
 
 To install Ruby on Rails development environment you just need to copy and paste this line the Terminal and press Enter. Enjoy the text flying on the screen, it will take quite some time. Grabbing a refreshing drink before starting is encouraged.
 
-    $ bash < <(curl -s  https://raw.githubusercontent.com/leesharma/up-and-running-rails/master/rails-install-ubuntu.sh)
+    $ bash < <(curl -s  https://raw.githubusercontent.com/leesharma/up-and-running-rails/ubuntu/rails-install-ubuntu.sh)
 
 ## Next Steps
 
@@ -22,12 +26,6 @@ $ heroku login
 
 ### Install offline documentation (recommended)
 
-#### OS X
-Dash is an API Documentation Browser and Code Snippet Manager. Install it [here][dash] and download the Ruby/Rails documentation and Rails Guides.
-
-[dash]: https://kapeli.com/dash
-
-#### Linux/Windows
 Zeal is an offline documentation browser inspired by Dash, available for Linux and Windows. Install it [here][zeal] and download the Ruby/Rails documentation and Rails Guides.
 
 [zeal]: http://zealdocs.org
