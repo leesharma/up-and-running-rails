@@ -52,7 +52,9 @@ private repositories.
 
 ## Credit
 
-Thank you to @railsgirls for providing the script that is the basis of this project.
+Thank you to [railsgirls][railsgirls] for providing the script that is the basis of this project.
+
+[railsgirls]: https://github.com/railsgirls
 
 
 
