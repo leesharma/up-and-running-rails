@@ -9,7 +9,7 @@
 
 To install Ruby on Rails development environment you just need to copy and paste this line the Terminal and press Enter. Enjoy the text flying on the screen, it will take quite some time. Grabbing a refreshing drink before starting is encouraged.
 
-    $ bash < <(curl -s  https://raw.github.com/railsgirls/installation-scripts/osx/rails-install-osx.sh)
+    $ bash < <(curl -s  https://raw.githubusercontent.com/leesharma/up-and-running-rails/osx/rails-install-osx.sh)
 
 ## Next Steps
 
