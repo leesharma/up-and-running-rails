@@ -1,10 +1,15 @@
 # Up and Running with Rails 4.2.1
 
-## Script for Ubuntu
+## First Steps
+
+1. Install PostgreSQL ([postgres.app](http://postgresapp.com))
+2. Install [pgAdmin3](http://www.postgresql.org/ftp/pgadmin3/release/)
+
+## Script for OS X
 
 To install Ruby on Rails development environment you just need to copy and paste this line the Terminal and press Enter. Enjoy the text flying on the screen, it will take quite some time. Grabbing a refreshing drink before starting is encouraged.
 
-    $ bash < <(curl -s  https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
+    $ bash < <(curl -s  https://raw.github.com/railsgirls/installation-scripts/osx/rails-install-osx.sh)
 
 ## Next Steps
 
@@ -14,15 +19,19 @@ To install Ruby on Rails development environment you just need to copy and paste
 
 [heroku]: https://heroku.com/
 
+- Install the [Heroku toolbelt][toolbelt]
+
+[toolbelt]: https://toolbelt.heroku.com
+
 - Sign into Heroku toolbelt
 
       $ heroku login
 
-### Install Zeal documentation
+### Install Dash documentation
 
-Zeal is an offline documentation browser inspired by Dash, available for Linux and Windows. Install it [here][zeal].
+Dash is an API Documentation Browser and Code Snippet Manager for OS X. Install it [here][dash].
 
-[zeal]: http://zealdocs.org
+[dash]: https://kapeli.com/dash
 
 ### Set up a GitHub/BitBucket/GitLab account
 
@@ -36,7 +45,7 @@ private repositories.
 
     rails new *project_name* -d postgres
     heroku create
-    git remote origin master *git@github.com:username/project_name.git*
+    git remote add origin *git@github.com:username/project_name.git*
 
 ## Credit
 
