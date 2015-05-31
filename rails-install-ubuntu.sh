@@ -5,11 +5,15 @@ set -e
 echo "Adding PPA for up-to-date Node.js runtime. Give your password when asked."
 sudo add-apt-repository ppa:chris-lea/node.js
 
+echo "Adding deb. repository for PostgreSQL"
+echo "deb http://apt/postgresql.org/pub/repos/apt/ trusty-pgdg main" > /etc/apt/sources.list.d/pgdg.list"
+wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
+
 echo "Updates packages. Asks for your password."
 sudo apt-get update -y
 
 echo "Installs packages. Give your password when asked."
-sudo apt-get install build-essential git-core curl openssl libssl-dev libcurl4-openssl-dev zlib1g zlib1g-dev libreadline libreadline-dev libreadline6 libreadline6-dev libyaml-dev libsqlite3-dev libsqlite3-0 sqlite3 libxml2-dev libxslt1-dev python-software-properties libffi-dev libgdm-dev libncurses5-dev automake autoconf libtool bison postgresql postgresql-contrib libpq-dev pgadmin3 libc6-dev nodejs -y
+sudo apt-get install build-essential git-core curl openssl libssl-dev libcurl4-openssl-dev zlib1g zlib1g-dev libreadline libreadline-dev libreadline6 libreadline6-dev libyaml-dev libsqlite3-dev libsqlite3-0 sqlite3 libxml2-dev libxslt1-dev python-software-properties libffi-dev libgdm-dev libncurses5-dev automake autoconf libtool bison libc6-dev postgresql-common postgresql-9.4 libpq-dev pgadmin3  nodejs -y
 
 echo "Installs ImageMagick for image processing"
 sudo apt-get install imagemagick --fix-missing -y
