@@ -39,6 +39,9 @@ cd /usr/local/heroku/ && bundle install
 echo "Symlinking heroku binary into /usr/bin to be accessable."
 sudo ln -s /usr/local/heroku/bin/heroku /usr/bin/heroku
 
+echo "Adding heroku command to .bashrc file."
+echo "alias heroku=\"/usr/bin/heroku\"" >> ~/.bashrc
+
 echo "Adds git lol: the other git log"
 git config --global --add alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
 
