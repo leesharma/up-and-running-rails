@@ -44,7 +44,7 @@ echo "Symlinking heroku binary into /usr/bin to be accessable."
 sudo ln -s /usr/local/heroku/bin/heroku /usr/bin/heroku
 
 echo "Adding heroku command to .bashrc file."
-echo "alias heroku=\"/usr/bin/heroku\"" >> ~/.bashrcro
+echo "alias heroku=\"/usr/bin/heroku\"" >> ~/.bashrc
 
 echo "Final install of Heroku Toolbelt, also installs the heroku-status plugin."
 heroku status
