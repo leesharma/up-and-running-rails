@@ -2,11 +2,11 @@
 
 set -e
 
-echo "Adding PPA for up-to-date Node.js runtime. Give your password when asked."
-sudo add-apt-repository ppa:chris-lea/node.js
+echo "Adding deb. repository for Node.js. Asks for your password."
+curl -sL https://deb.nodesource.com/setup | sudo bash -
 
-echo "Adding deb. repository for PostgreSQL"
-echo "deb http://apt/postgresql.org/pub/repos/apt/ trusty-pgdg main" > /etc/apt/sources.list.d/pgdg.list"
+echo "Adding deb. repository for PostgreSQL. Asks for your password."
+echo "deb http://apt/postgresql.org/pub/repos/apt/ trusty-pgdg main" > /etc/apt/sources.list.d/pgdg.list
 wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
 
 echo "Updates packages. Asks for your password."
@@ -20,7 +20,7 @@ sudo apt-get install imagemagick --fix-missing -y
 
 echo "Installs RVM (Ruby Version Manager) for handling Ruby installation"
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-curl -sSL https://get.rvm.io | bash -s stable
+curl -sSL https://get.rvm.io | bash -s -- --version 1.26.11
 source ~/.rvm/scripts/rvm
 
 echo "Installs Ruby"
@@ -60,7 +60,7 @@ echo -e "Now we are going to print some information to check that everything is 
 
 echo -n "Should be sqlite 3.8.2 or higher: sqlite "
 sqlite3 --version
-echo -n "Should be rvm 1.26.11 or higher:         "
+echo -n "Should be rvm 1.26.11:         "
 rvm --version | sed '/^.*$/N;s/\n//g' | cut -c 1-10
 echo -n "Should be ruby 2.2.2:                "
 ruby -v | cut -d " " -f 2
