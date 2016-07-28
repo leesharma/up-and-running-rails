@@ -1,4 +1,4 @@
-# Up and Running with Rails 4.2.1
+# Up and Running with Rails 5.0
 
 ## First Steps
 
@@ -25,7 +25,9 @@ To install Ruby on Rails development environment you just need to copy and paste
 
 - Sign into Heroku toolbelt
 
-      $ heroku login
+  ```bash
+  $ heroku login
+  ```
 
 ### Install Dash documentation
 
@@ -50,8 +52,3 @@ private repositories.
 ## Credit
 
 Thank you to @railsgirls for providing the script that is the basis of this project.
-
-
-
-
-
