@@ -1,32 +1,37 @@
 set -e
 
-echo "Installs Homebrew for installing other software"
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+echo "Checking for Homebrew, the missing package manager for OS X <http://brew.sh/>"
+command -v brew >/dev/null 2>&1 || {
+  echo "Homebrew not found. Installing Homebrew..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+}
 
-echo "Installs Git"
+echo "Installing Git"
 brew install git
 
-echo "Installs ImageMagick for image processing"
+echo "Installing ImageMagick for image processing"
 brew install imagemagick
 
-echo "Updates Homebrew"
+echo "Updating Homebrew"
 brew update
 
-echo "Adds git lol: the other git log"
+echo "Adding git lol: the other git log"
 git config --global --add alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
 
-echo "Installs RVM (Ruby Version Manager) for handling Ruby installation"
-brew install gpg
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-curl -kL get.rvm.io | bash -s -- --version 1.26.11
-source ~/.rvm/scripts/rvm
+echo "Installing RVM (Ruby Version Manager) for handling Ruby installation"
+command -v rvm >/dev/null 2>&1 || {
+  brew install gpg
+  gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+  curl -kL get.rvm.io | bash -s -- --version 1.26.11
+  source ~/.rvm/scripts/rvm
+}
 rvm get stable
 
-echo "Install Ruby"
+echo "Installing Ruby"
 rvm install 2.2.2
 rvm use 2.2.2 --default
 
-echo "Install Redis: in-memory data store for ActionCable"
+echo "Installing Redis: in-memory data store for ActionCable"
 brew install redis
 
 gem install bundler --no-rdoc --no-ri
